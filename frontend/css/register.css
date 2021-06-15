@@ -881,7 +881,7 @@ footer .social-icon {
     display: block;
     width: 60%;
     padding: 20px;
-    font-family: font-family;
+    font-family: 'Montserrat', sans-serif;
     -webkit-appearance: none;
     border: 0;
     outline: 0;
@@ -900,12 +900,12 @@ footer .social-icon {
     display: block;
     width: 60%;
     padding: 20px;
-    font-family: font-family;
+    font-family: 'Montserrat', sans-serif;
     -webkit-appearance: none;
     outline: 0;
     border: 0;
     color: white;
-    background: grey;
+    background: #ce3232;
     transition: 0.3s;
 }  
 .btn-register:hover {
@@ -915,12 +915,12 @@ footer .social-icon {
 {
     width: 60%;
     padding: 20px;
-    font-family: font-family;
+    font-family: 'Montserrat', sans-serif;;
     -webkit-appearance: none;
     outline: 0;
     border: 0;
     color: white;
-    background: grey;
+    background: #ce3232;
     transition: 0.3s;
 }  
 .btn-register-google:hover {
