@@ -87,17 +87,17 @@
              <div class="col-md-8 col-sm-12">
                 <div class="user">
                         <h2 class="user__title" style="color: cornsilk;">Login</h2>
-                        <form class="form">
+                        <form action="/api/login" method="POST" class="form">
                             <div class="form__group">
-                                <input type="text" placeholder="Username" class="form__input" />
+                                <input type="text" placeholder="Username" class="form__input" name="email" required />
                             </div>
                             
                             
                             <div class="form__group">
-                                <input type="password" placeholder="Password" class="form__input" />
+                                <input type="password" placeholder="Password" class="form__input" name="password" required />
                             </div>
                             
-                            <button class="btn-register" type="button">Login</button>
+                            <button class="btn-register" type="submit">Login</button>
                     
                         </form>
                     </div>
