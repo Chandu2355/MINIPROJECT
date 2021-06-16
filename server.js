@@ -1,5 +1,7 @@
-const express = require('express');
-const mongoose = require('mongoose');
+require('dotenv').config()
+
+const express = require('express')
+const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const config = require('./backend/config/config')
 const dbconnectLib = require('./backend/lib/dbConnect')
@@ -24,7 +26,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 60 * 60 * 1000
+        maxAge: 1000
     },
     store: MongoStore.create({ mongoUrl: process.env.MONGO_CONNECTION_STRING })
 
@@ -129,11 +131,12 @@ app.get("/register", function(req, res){
     res.sendFile(i);
 });
 
-app.get("/package1", function(req, res){
-    let i = __dirname + "/frontend/html/package1.html";
+app.get("/p1", function(req, res){
+    let i = __dirname + "/frontend/html/p1.html";
     res.sendFile(i);
 });
- 
+
+
 app.listen(PORT, function(){
     console.log("Server Starting running on http://localhost:"+PORT);
 });
