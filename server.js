@@ -28,7 +28,7 @@ app.use(session({
     cookie: {
         maxAge: 1000
     },
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_CONNECTION_STRING })
+    store: MongoStore.create({ mongoUrl: process.env.MONGO })
 
 }))
 
