@@ -58,34 +58,12 @@
                          <li><a href="#home" class="smoothScroll">Home</a></li>
                          <li><a href="#about" class="smoothScroll">About Us</a></li>
                          <li><a href="#team" class="smoothScroll">Packages</a></li>
-                         <li><a href="#menu" class="smoothScroll">Your Cart</a></li>
+                         <li><a href="/cart" class="smoothScroll">Your Cart</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
-               
-                    <li><div id="signedIn">
-                         
-                      <ul class="navbar-nav me-auto">
-                        <li class="nav-item dropdown">
-                         <button onclick="logout()" style="border-radius: 50px 50px 50px 50px; float: inline-start;
-                         text-align: center;">Logout</button>
-                          <a id="signedIn" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">hi</a>
-                          <div class="dropdown-menu">
-                              <select name="cars" id="cars">
-                                   <option value="volvo">Volvo</option>
-                                   <option value="saab">Saab</option>
-                                   <option value="mercedes">Mercedes</option>
-                                   <option value="audi">Audi</option>
-                              </select>
-                            <a id="lnkLogout" class="dropdown-item" href="#">Logout</a>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-               </li>
-                    </ul>
-                    
+                         <li id="signedIn"></li>
+                         <li id="test"></li>
 
-                    
+                    </ul>
                </div>
 
           </div>
@@ -103,7 +81,7 @@
                                         <div class="col-md-8 col-sm-12">
                                              <h3>COVIFEED - Meals for the Masses</h3>
                                              <h1>Our mission is to give your health the food it needs.</h1>
-                                             <a id= "notSignedIn" href="/register" class="section-btn btn btn-default smoothScroll">Sign In / Sign Up</a>
+                                             <a id="signedIn1" href="/register" class="section-btn btn btn-default smoothScroll">Sign In / Sign Up</a>
                                         </div>
                                    </div>
                               </div>
@@ -156,7 +134,7 @@
 
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <a href="/p1"><img src="images/team-image1.jpg" class="img-responsive" alt=""></a>
+                              <a href="/p1" id="notSignedIn"><img src="images/team-image1.jpg" class="img-responsive" alt=""></a>
                          </div>
                          <div class="team-info">
                               <h3>Price: <span>&#8377;</span>250</h3>
@@ -166,7 +144,7 @@
 
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/team-image2.jpg" class="img-responsive" alt="">
+                              <a href="/p2"><img src="images/team-image2.jpg" class="img-responsive" alt=""></a>
                          </div>
                          <div class="team-info">
                               <h3>Price: <span>&#8377;</span>1500 </h3>
@@ -176,7 +154,7 @@
 
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="images/team-image3.jpg" class="img-responsive" alt="">
+                              <a href="/p3"><img src="images/team-image3.jpg" class="img-responsive" alt=""></a>
                          </div>
                          <div class="team-info">
                               <h3>Price: <span>&#8377;</span>3000</h3>

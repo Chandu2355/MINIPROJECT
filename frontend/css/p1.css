@@ -434,6 +434,123 @@ section {
 }
 
 
+#home {
+  padding: 0;
+}
+
+#home h1 {
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+
+#home h3 {
+  color: #f9f9f9;
+  font-size: 14px;
+  line-height: inherit;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .slider .col-md-8 {
+    padding-left: 0;
+  }
+}
+
+.slider .owl-dots {
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  justify-content: center;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: block;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  margin: 7px 10px;
+  border: 2px solid #d9d9d9;
+  background: transparent;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+.slider .caption {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  background-color: rgba(20,20,20,0.2);
+  height: 100%;
+  color: #fff;
+  cursor: e-resize;
+  padding: 4em 0 0 2em;
+}
+
+.slider .item {
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  height: 650px;
+}
+
+
+.slider .item-first {
+  background-image: url(../images/slider-image1.jpg);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.login-form
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 160px;
+    padding-left: 100px;
+}
+
+.slider .item-second {
+  background-image: url(../images/slider-image2.jpg);
+}
+
+.slider .item-third {
+  background-image: url(../images/slider-image3.jpg);
+}
+
+.slider .item-second .section-btn {
+  background: #292929;
+}
+
+.slider .item-second .section-btn:hover {
+  background: #ffffff;
+}
+
+.slider .item-third .section-btn {
+  background: transparent;
+  border: 1px solid #ffffff;
+}
+
+.slider .item-third .section-btn:hover,
+.slider .item-third .section-btn:focus {
+  background: #ce3232;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+
 
 /*---------------------------------------
     ABOUT              
@@ -875,5 +992,74 @@ footer .social-icon {
   .menu-thumb .menu-info {
     top: 60%;
   }
+}
+
+/*-------------------
+TABLE CSS
+------------*/
+table {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/*-------------
+WARNING NOTE CSS
+------------*/
+
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+  
+}
+
+/* .button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #ce3232;}
+.button :focus{
+  background-color:#ffffff ;
+} */
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #ce3232;
+  color: white;
+  
+}
+
+.button1:hover {
+  background-color: rgb(209, 201, 201);
+  color:black;
 }
 

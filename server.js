@@ -26,7 +26,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 1000
+        maxAge: 60 * 60 *1000
     },
     store: MongoStore.create({ mongoUrl: process.env.MONGO })
 
@@ -59,7 +59,7 @@ var isAuthenticated = (req, res, next) => {
     if (req.session && req.session.userid)
         next();
     else
-        return res.redirect("/login");
+        return res.redirect("/");
 }
 
 
@@ -74,10 +74,19 @@ app.get("/home", isAuthenticated, (req, res) => {
     res.sendFile(__dirname + "/frontend/html/home.html")
 })
 
-app.get("/getdetails", isAuthenticated, (req, res) => {
-    res.json({
-        username: req.session.username
-    });
+app.get("/getdetails", (req, res) => {
+    if(req.session && req.session.username){
+
+    
+        res.json({
+            username: req.session.username
+        });
+    }
+    else{
+        res.json({
+            username: undefined
+        })
+    }
 })
 
 app.get("/api/logout", isAuthenticated, (req, res) => {
@@ -87,6 +96,7 @@ app.get("/api/logout", isAuthenticated, (req, res) => {
                 err: "error"
             })
     })
+    console.log(req.session)
 
     return res.status(200).json({
         message: "succcessful signout"
@@ -116,8 +126,10 @@ app.post('/api/register', function(req, res) {
 })
 
 
+
 app.get("/", function(req, res){
     let i = __dirname + "/frontend/html/home.html";
+    //res.send("Hello");
     res.sendFile(i);
 });
 
@@ -131,10 +143,27 @@ app.get("/register", function(req, res){
     res.sendFile(i);
 });
 
-app.get("/p1", function(req, res){
+app.get("/p1", isAuthenticated, function(req, res){
     let i = __dirname + "/frontend/html/p1.html";
+    res.sendFile(i); 
+
+});
+
+app.get("/p2", function(req, res){
+    let i = __dirname + "/frontend/html/p2.html";
     res.sendFile(i);
 });
+
+app.get("/p3", function(req, res){
+    let i = __dirname + "/frontend/html/p3.html";
+    res.sendFile(i);
+});
+
+app.get("/cart", function(req, res){
+    let i = __dirname + "/frontend/html/cart.html";
+    res.sendFile(i);
+});
+
 
 
 app.listen(PORT, function(){
