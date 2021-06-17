@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
@@ -77,7 +78,6 @@ app.get("/home", isAuthenticated, (req, res) => {
 app.get("/getdetails", (req, res) => {
     if(req.session && req.session.username){
 
-    
         res.json({
             username: req.session.username
         });
@@ -126,10 +126,8 @@ app.post('/api/register', function(req, res) {
 })
 
 
-
 app.get("/", function(req, res){
     let i = __dirname + "/frontend/html/home.html";
-    //res.send("Hello");
     res.sendFile(i);
 });
 
@@ -146,15 +144,14 @@ app.get("/register", function(req, res){
 app.get("/p1", isAuthenticated, function(req, res){
     let i = __dirname + "/frontend/html/p1.html";
     res.sendFile(i); 
-
 });
 
-app.get("/p2", function(req, res){
+app.get("/p2", isAuthenticated, function(req, res){
     let i = __dirname + "/frontend/html/p2.html";
     res.sendFile(i);
 });
 
-app.get("/p3", function(req, res){
+app.get("/p3", isAuthenticated, function(req, res){
     let i = __dirname + "/frontend/html/p3.html";
     res.sendFile(i);
 });
