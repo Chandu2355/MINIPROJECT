@@ -58,7 +58,6 @@
                          <li><a href="/" class="smoothScroll">Home</a></li>
                          <li><a href="/" class="smoothScroll">About Us</a></li>
                          <li><a href="/" class="smoothScroll">Packages</a></li>
-                         <li><a href="/cart" class="smoothScroll">Your Cart</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
                          <li id="signedIn"></li>
                          <li id="test"></li>
@@ -124,7 +123,8 @@
                
           </div>
           <div class="row" style="margin-left: 1px;">
-               <a href="/cart"><button class="button button1" type="submit" style="width: 250px; " >Add to Cart</button></a>
+               <a href="/payment"><button  class="button button1 addtocart" type="submit" style="width: 250px;" onclick="pay()">Proceed for Payment</button></a>
+               <div id="snackbar">Your order has been confirmed</div>
           </div>
      </div>
 </section>

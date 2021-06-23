@@ -156,8 +156,8 @@ app.get("/p3", isAuthenticated, function(req, res){
     res.sendFile(i);
 });
 
-app.get("/cart", function(req, res){
-    let i = __dirname + "/frontend/html/cart.html";
+app.get("/payment", function(req, res){
+    let i = __dirname + "/frontend/html/payment.html";
     res.sendFile(i);
 });
 
