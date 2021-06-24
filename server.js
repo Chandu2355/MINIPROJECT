@@ -7,7 +7,8 @@ const bodyParser = require('body-parser')
 const config = require('./backend/config/config')
 const dbconnectLib = require('./backend/lib/dbConnect')
 var users = require('./backend/models/userModel')
-
+var addressLib = require('./backend/lib/addressLib')
+mongoose.set('useCreateIndex', true);
 const app = express();
 
 app.use(express.urlencoded({ extended: true }))
@@ -44,6 +45,8 @@ app.post('/api/login', function(req, res) {
         if (err) { res.status(400).json({ msg: "Failed" }); } else if (data.length == 1) {
             req.session.userid = data[0]._id
             req.session.username = data[0].username
+            //TODO:  Move to single object in session
+            //req.session.user = {userid: data[0]._id, username: data[0].username}
             console.log(req.session)
             res.redirect("/home");
 
@@ -73,6 +76,9 @@ var isNotAuthenticated = (req, res, next) => {
 
 app.get("/home", isAuthenticated, (req, res) => {
     res.sendFile(__dirname + "/frontend/html/home.html")
+})
+app.get("/addresses", isAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/frontend/html/addresses.html")
 })
 
 app.get("/getdetails", (req, res) => {
@@ -124,6 +130,9 @@ app.post('/api/register', function(req, res) {
         }
     });
 })
+
+app.post("/api/addresses", isAuthenticated, addressLib.addAddressForUser);
+app.get("/api/addresses", isAuthenticated, addressLib.getAllAddressOfAUser);
 
 
 app.get("/", function(req, res){
