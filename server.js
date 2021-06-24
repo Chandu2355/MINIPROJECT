@@ -8,7 +8,7 @@ const config = require('./backend/config/config')
 const dbconnectLib = require('./backend/lib/dbConnect')
 var users = require('./backend/models/userModel')
 var addressLib = require('./backend/lib/addressLib')
-
+mongoose.set('useCreateIndex', true);
 const app = express();
 
 app.use(express.urlencoded({ extended: true }))
@@ -131,6 +131,7 @@ app.post('/api/register', function(req, res) {
     });
 })
 
+app.post("/api/addresses", isAuthenticated, addressLib.addAddressForUser);
 app.get("/api/addresses", isAuthenticated, addressLib.getAllAddressOfAUser);
 
 
