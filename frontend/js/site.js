@@ -44,14 +44,12 @@ function pageInitialise(){
 
     var onSignIn = function(loggedIn){
         if(loggedIn){
-            console.log("Logged In");
+            //console.log("Logged In");
             $("#s1").hide();
-            
-
         }
         else{
-            console.log("Not Logged In");
-            $("#s1").show();
+            //console.log("Not Logged In");
+            $("#s1").hide();
             
         }
     }
@@ -75,7 +73,7 @@ $.ajax({
                 pageInitialise()
 
                 
-               //$('#s1').hide()
+               $('#s1').hide()
                 
 
                 $("#test").html(`<a> <button id="b1" onclick="logout()" 
@@ -107,8 +105,17 @@ $.ajax({
     }
 
     function checkout(){
+        
         var x = document.getElementById("snackbar");
         x.className = "show";
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        
+    }
+
+    function finish(){
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        window.location.href="/"
     }
 

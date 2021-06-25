@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+
+     <title>Checkout</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	 <link rel="icon" type="image/png" href="/images/logo.png"/>
+
+     <!-- MD BOOTSRAP -->
+    
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    
+
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+     <!-- MAIN CSS -->
+     
+      <link rel="stylesheet" href="css/p1.css"> 
+      <link rel="stylesheet" href="css/checkout.css"> 
+      
+
+       <style>
+        .mdb-select2 {width: 50%;}
+        .select2-container {margin-top: 1em;}
+        .bmd-form-group .form-control, .bmd-form-group label, .bmd-form-group input::placeholder{line-height:1}
+        span.select2.select2-container.select2-container--default{width: 100%!important;}
+        .select2-container--default .select2-selection--single {border-top: 0;border-left: 0;border-right: 0;border-bottom: 1px solid #ccc;background-color: transparent;border-radius: 0;}
+        .select2-dropdown, .select2-dropdown--above {border-radius: 0;padding: 0.35rem;border: 0;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);}
+        .select2-container--default .select2-selection--multiple {border-top: 0;border-left: 0;border-right: 0;border-bottom: 1px solid #ccc;background-color: transparent;border-radius: 0;height: 40px;}
+        .select2-container *:focus {outline: none;}
+        .select2-container--default.select2-container--focus .select2-selection--multiple {border: 0;}
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {background-color: #fff;}
+        .select2-selection__choice__remove {color: #381fa8!important;}
+        .select2-results__option {color: #000000dd;font-size: small;}
+        .select2-results__option--highlighted,.select2-results__option[aria-selected="true"]  {color: #fff;border-radius:.25rem}
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4); background-color: #f33527;color: #fff;}
+        .select2-container--default .select2-results__option[aria-selected="true"] {box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4); background-color: #f33527;color: #fff;}
+        
+
+       </style>
+
+</head>
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="/" class="navbar-brand">CoviFeed</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="/" class="smoothScroll">Home</a></li>
+                         <li><a href="/" class="smoothScroll">About Us</a></li>
+                         <li><a href="/" class="smoothScroll">Packages</a></li>
+                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li id="signedIn"></li>
+                         <li id="test"></li>
+                    </ul>
+
+                    
+               </div>
+
+          </div>
+     </section>
+     
+
+     <!-- PACKAGE1 -->
+    
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12 ">
+                         <div class="p1 product product1" id=" 1">
+                              <!-- <hr style="border: 1px solid #f0e4e4 ; width: 200%;"> -->
+                              <br><br><br><br>
+                              <h4 class="productname" style="margin-left: 25px;">Package Name: 14-Day Meal Package</h4>
+                              <h4 class="price" style="margin-left: 25px;">Price: <span>&#8377;</span>3000</h4>
+                              <br><br>
+                    
+                              
+                              <h2 style="margin-left: 25px;">Select your Location</h2>
+                                <div class="container">
+                                    <div class="row">
+                                    <div class="col-8">
+                                  <div class="form-group bmd-form-group {color}">
+                                <select class="form-control mdb-select2">
+                                    <option selected>LOCATION</option>
+                                    <option value="1">Ameerpet</option>
+                                    <option value="2">Alwal</option>
+                                    <option value="3">Balanagar</option>
+                                    <option value="4">Dilsukhnagar</option>
+                                    <option value="5">Gachibowli</option>
+                                    <option value="6">Ghatkesar</option>
+                                    <option value="7">Hayathnagar</option>
+                                    <option value="8">Hitechcity</option>
+                                    <option value="9">Jubilee Hills</option>
+                                    <option value="10">Khairatabad</option>
+                                    <option value="11">Kapra</option>
+                                    <option value="12">Keesara</option>
+                                    <option value="13">Kompally</option>
+                                    <option value="14">Kukatpally</option>
+                                    <option value="15">LB Nagar</option>
+                                    <option value="16">Malkajigiri</option>
+                                    <option value="17">Mehdipatnam</option>
+                                    <option value="18">Nampally</option>
+                                    <option value="19">Old City</option>
+                                    <option value="20">Patancheru</option>
+                                    <option value="21">Qutubullapur</option>
+                                    <option value="22">Sanathnagar</option>
+                                    <option value="23">Secunderabad</option>
+                                    <option value="24">Shamshabad</option>
+                                    <option value="25">Uppal</option>        
+                                    </select>  
+                                  </div>
+                                </div>    
+                              </div>
+                            </div>
+                            <h2 style="margin-left: 25px;">Enter your address</h2>
+
+
+                            <div class="container">
+                                
+                                <fieldset>
+                              
+                                    <div class="row">
+                                         <div class="small-12 columns">
+                                              <label>
+                                                   <span>Full Name</span> &nbsp;&nbsp;&nbsp;
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                         <div class="small-12 columns">
+                                              <label>
+                                                   <span>Address </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                         <div class="small-6 columns">
+                                              <label>
+                                                   <span>City</span> &emsp;&emsp;&emsp;&emsp;
+      
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                         <div class="small-2 columns">
+                                              <label>
+                                                   <span class="_state">State</span>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                                                   <input type="text">
+                                                   
+                                              </label>
+                                         </div>
+                                         <div class="small-4 columns">
+                                              <label>
+                                                   <span class="_zip">Pincode</span>&emsp;&emsp;
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                    </div>
+                                    <div class="row">
+                                         <div class="small-12 columns">
+                                              <label>
+                                                   <span>Phone</span>&emsp;&emsp;&emsp;
+                                                   <input type="tel">
+                                              </label>
+                                         </div>
+                                    </div>
+                               </fieldset>
+            
+                            </div>
+
+                          
+                            <br><br><br><br>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         
+                        <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                            
+                             <img src="images/p5.jpg" class="img-responsive" alt="" style="height: 400px; width: 1500px; padding-left: 100px; padding-top: 50px;">
+                             <br><br>
+                        </div>
+                   </div>
+
+                
+               </div>
+               <div class="row" style="margin-left: 1px;">
+                    <a href="/finalPay"><button  class="button button1 addtocart" type="submit" style="width: 250px; margin-left: 400px;" onclick="checkout()">CHECKOUT</button></a>
+                    <div id="snackbar">Proceed for Payment</div>
+               </div>
+          </div>
+     </section>
+      
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+		
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-3 col-sm-8">
+                       <div class="footer-info" id="f1">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Contact us</h2>
+                            </div>
+                            <address class="wow fadeInUp" data-wow-delay="0.4s">
+                              <p>+91 6755904831</p>
+                              <p><a href="mailto:covidfeed.telangana@gmail.com">covidfeed.telangana@gmail.com</a></p>
+                         </address>
+                       </div>
+                  </div>
+
+                  <div class="col-md-3 col-sm-8">
+                       <div class="footer-info" id="f2">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Support the Cause </h2>
+                            </div>
+                            <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>Your donation will help fund another soul in need.</p>
+                                 <p>You can donate to : <a href="https://www.pmcares.gov.in/en/">PMCares</a></p>
+                                 
+                            </address>
+                       </div>
+                  </div>
+                  
+             </div>
+             <br><br>
+
+             <div class="col-md-2 col-sm-4" id = "f3" style="text-align: center;">
+              <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s" >
+                   <li><a href="https://www.facebook.com/" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                   <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                   <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                   <li><a href="https://www.google.com" class="fa fa-google"></a></li>
+              </ul>
+
+              <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s"> 
+                   <p>Copyright @CoviFeed <br>2021 </p>
+              </div>
+         </div> 
+        </div>
+   </footer>
+
+
+   <!-- SCRIPTS -->
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+    <script>
+        $('document').ready(function() {
+        $('.mdb-select2').select2();
+        });
+    </script>
+
+   <script src="js/jquery.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.stellar.min.js"></script>
+   <script src="js/wow.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <script src="js/jquery.magnific-popup.min.js"></script>
+   <script src="js/smoothscroll.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="js/site.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

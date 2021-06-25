@@ -3,7 +3,7 @@
 <head>
 	
 
-     <title>Payment</title>
+     <title>Checkout</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -111,8 +111,8 @@
                          <div class="p1 product product1" id=" 1">
                               <!-- <hr style="border: 1px solid #f0e4e4 ; width: 200%;"> -->
                               <br><br><br><br>
-                              <h4 class="productname" style="margin-left: 25px;">Package Name: 1-Day Meal Package</h4>
-                              <h4 class="price" style="margin-left: 25px;">Price: <span>&#8377;</span>250</h4>
+                              <h4 class="productname" style="margin-left: 25px;">Package Name: 7-Day Meal Package</h4>
+                              <h4 class="price" style="margin-left: 25px;">Price: <span>&#8377;</span>1500</h4>
                               <br><br>
                     
                               
@@ -156,48 +156,64 @@
                             <h2 style="margin-left: 25px;">Enter your address</h2>
 
 
-                            <div class="container1">
+                            <div class="container">
                                 
-                                <div class="form">
-                                  
-                                <div class="fields fields--2">
-                                  <label class="field">
-                                    <span class="field__label" for="firstname">First name</span>
-                                    <input class="field__input" type="text" id="firstname" value="John" />
-                                  </label>
-                                  <label class="field">
-                                    <span class="field__label" for="lastname">Last name</span>
-                                    <input class="field__input" type="text" id="lastname" value="Doe" />
-                                  </label>
-                                </div>
-                                <label class="field">
-                                  <span class="field__label" for="address">Address</span>
-                                  <input class="field__input" type="text" id="address" />
-                                </label>
-                                
-                                <div class="fields fields--3">
-                                  <label class="field">
-                                    <span class="field__label" for="zipcode">Zip code</span>
-                                    <input class="field__input" type="text" id="zipcode" />
-                                  </label>
-                                  <label class="field">
-                                    <span class="field__label" for="city">City</span>
-                                    <input class="field__input" type="text" id="city" />
-                                  </label>
-                                  <label class="field">
-                                    <span class="field__label" for="state">State</span>
-                                    <select class="field__input" id="state">
-                                      <option value=""></option>
-                                    </select>
-                                  </label>
-                                </div>
-                                </div>
-                                <hr>
+                                <fieldset>
+                              
+                                    <div class="row">
+                                         <div class="small-12 columns">
+                                              <label>
+                                                   <span>Full Name</span> &nbsp;&nbsp;&nbsp;
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                         <div class="small-12 columns">
+                                              <label>
+                                                   <span>Address </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                         <div class="small-6 columns">
+                                              <label>
+                                                   <span>City</span> &emsp;&emsp;&emsp;&emsp;
+      
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                         <div class="small-2 columns">
+                                              <label>
+                                                   <span class="_state">State</span>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                                                   <input type="text">
+                                                   
+                                              </label>
+                                         </div>
+                                         <div class="small-4 columns">
+                                              <label>
+                                                   <span class="_zip">Pincode</span>&emsp;&emsp;
+                                                   <input type="text">
+                                              </label>
+                                         </div>
+                                    </div>
+                                    <div class="row">
+                                         <div class="small-12 columns">
+                                              <label>
+                                                   <span>Phone</span>&emsp;&emsp;&emsp;
+                                                   <input type="tel">
+                                              </label>
+                                         </div>
+                                    </div>
+                               </fieldset>
             
-                              </div>
+                            </div>
 
                           
-                            <br><br><br><br><br><br><br><br>
+                            <br><br><br><br>
                          </div>
                     </div>
 
@@ -213,7 +229,7 @@
                 
                </div>
                <div class="row" style="margin-left: 1px;">
-                    <button  class="button button1 addtocart" type="submit" style="width: 250px; margin-left: 400px;" onclick="checkout()">CHECKOUT</button>
+                    <a href="/finalPay"><button  class="button button1 addtocart" type="submit" style="width: 250px; margin-left: 400px;" onclick="checkout()">CHECKOUT</button></a>
                     <div id="snackbar">Proceed for Payment</div>
                </div>
           </div>
@@ -291,11 +307,6 @@
    <script src="js/custom.js"></script>
    <script src="js/site.js"></script>
 
-
-
-   
-
-  
 </body>
 </html>
 

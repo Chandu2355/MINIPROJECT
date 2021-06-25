@@ -165,8 +165,23 @@ app.get("/p3", isAuthenticated, function(req, res){
     res.sendFile(i);
 });
 
-app.get("/payment", function(req, res){
-    let i = __dirname + "/frontend/html/payment.html";
+app.get("/payment1", function(req, res){
+    let i = __dirname + "/frontend/html/payment1.html";
+    res.sendFile(i);
+});
+
+app.get("/payment2", function(req, res){
+    let i = __dirname + "/frontend/html/payment2.html";
+    res.sendFile(i);
+});
+
+app.get("/payment3", function(req, res){
+    let i = __dirname + "/frontend/html/payment3.html";
+    res.sendFile(i);
+});
+
+app.get("/finalPay", function(req, res){
+    let i = __dirname + "/frontend/html/finalPay.html";
     res.sendFile(i);
 });
 
