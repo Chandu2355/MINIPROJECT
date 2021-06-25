@@ -41,6 +41,4 @@ $(function(){
 		addressesObject.saveAddress();
 	})
 
-	// This was just for testing, keep it commented or delete it
-	//addressesObject.saveAddress();
 });

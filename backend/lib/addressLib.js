@@ -50,7 +50,6 @@ module.exports.getAllAddressOfAUser = function(req, res){
 		})
 	}
 	else{
-		// TODO:  Define a format for error to return
 		res.json({'error': 'no addresses found'});
 	}
 }

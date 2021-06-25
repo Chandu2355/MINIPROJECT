@@ -84,7 +84,6 @@ $.ajax({
                 background-color: #ce3232; ">LOG OUT</button> </a>`)
                 
                 $("#signedIn").append("<a> Welcome &nbsp;" + data.username + "</a>")
-                // $('#cart').append("<a> Your Orders </a>")
                 
             }
 
@@ -112,7 +111,7 @@ function checkout(){
         var x = document.getElementById("snackbar");
         x.className = "show";
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-        // window.location.href="/finalPay"
+        window.location.href="/finalPay"
 
     }
         
