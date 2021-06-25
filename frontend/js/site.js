@@ -40,18 +40,19 @@ function pageInitialise(){
             return true;
         }
     };
+    console.log(JSON.stringify(userObject))
 
     var onSignIn = function(loggedIn){
         if(loggedIn){
             console.log("Logged In");
-            $("#signedIn").show();
-            $("#notSignedIn").hide();
+            $("#s1").hide();
+            
 
         }
         else{
             console.log("Not Logged In");
-            $("#notSignedIn").show();
-            $("#signedIn").hide();
+            $("#s1").show();
+            
         }
     }
 
@@ -71,9 +72,10 @@ $.ajax({
     success: function(data) {
 
             if(data.username){
+                pageInitialise()
 
                 
-                $('#s1').hide()
+               //$('#s1').hide()
                 
 
                 $("#test").html(`<a> <button id="b1" onclick="logout()" 
@@ -88,16 +90,10 @@ $.ajax({
                 background-color: #ce3232; ">LOG OUT</button> </a>`)
                 
                 $("#signedIn").append("<a> Welcome &nbsp;" + data.username + "</a>")
-                $("#signedIn").append(cssLink)
-                cssLink.attr({
-                    rel: "stylesheet",
-                    type: "text/css",
-                    href: "css/p1.css"
-                }) 
+               
 
-                
-
-                
+                //$('#signedIn').append('<link rel="stylesheet" type="text/css" href="css/p1.css">');
+ 
             }
 
         }  
