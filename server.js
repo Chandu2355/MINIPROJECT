@@ -8,8 +8,9 @@ const config = require('./backend/config/config')
 const dbconnectLib = require('./backend/lib/dbConnect')
 var users = require('./backend/models/userModel')
 var addressLib = require('./backend/lib/addressLib')
-mongoose.set('useCreateIndex', true);
+
 const app = express();
+mongoose.set('useCreateIndex', true);
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -77,9 +78,7 @@ var isNotAuthenticated = (req, res, next) => {
 app.get("/home", isAuthenticated, (req, res) => {
     res.sendFile(__dirname + "/frontend/html/home.html")
 })
-app.get("/addresses", isAuthenticated, (req, res) => {
-    res.sendFile(__dirname + "/frontend/html/addresses.html")
-})
+
 
 app.get("/getdetails", (req, res) => {
     if(req.session && req.session.username){
@@ -153,6 +152,7 @@ app.get("/register", function(req, res){
 app.get("/p1", isAuthenticated, function(req, res){
     let i = __dirname + "/frontend/html/p1.html";
     res.sendFile(i); 
+    
 });
 
 app.get("/p2", isAuthenticated, function(req, res){
@@ -182,6 +182,11 @@ app.get("/payment3", function(req, res){
 
 app.get("/finalPay", function(req, res){
     let i = __dirname + "/frontend/html/finalPay.html";
+    res.sendFile(i);
+});
+
+app.get("/orders", isAuthenticated, function(req, res){
+    let i = __dirname + "/frontend/html/orders.html";
     res.sendFile(i);
 });
 

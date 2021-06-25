@@ -7,7 +7,7 @@ $(function(){
 			// TODO:  get values user filled
 			var pinCode = $("#pinCode").val();
 			// TODO:  Update hardcoded values with values obtained from form
-			var addressData = {pinCode: 533333, address:'Lalitha Lane, Lalitha Mansion'};
+			var addressData = {pinCode: 5333, address:'Lalitha Lane, Lalitha Mansion'};
 			$.ajax({
 				url: "/api/addresses",
 				method: "post",

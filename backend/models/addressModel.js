@@ -1,15 +1,18 @@
 var mongoose = require('mongoose');
 
 var addressSchema = new mongoose.Schema({
-    pinCode: {type: Number, required:true},
+
+    location: String,
+    fullName: String,
     address : String,
-    locality : String,
-    landMark : String,
-    City: String,
-    State: String,
+    city: String,
+    state: String,
+    pinCode: {type: Number, required:true},
+    phone: Number,
     // Reference Field 
     userId : {required:true, type: mongoose.Schema.Types.ObjectId, ref: 'user'},
-    isDefaultAddress: Boolean,
+    packageName: String,
+    price: String,
     isDeleted : Boolean
 }, {
     timestamps: true

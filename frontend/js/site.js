@@ -40,7 +40,7 @@ function pageInitialise(){
             return true;
         }
     };
-    console.log(JSON.stringify(userObject))
+    //console.log(JSON.stringify(userObject))
 
     var onSignIn = function(loggedIn){
         if(loggedIn){
@@ -71,11 +71,7 @@ $.ajax({
 
             if(data.username){
                 pageInitialise()
-
-                
-               $('#s1').hide()
-                
-
+               
                 $("#test").html(`<a> <button id="b1" onclick="logout()" 
                 
                 style = " border: none;
@@ -88,34 +84,44 @@ $.ajax({
                 background-color: #ce3232; ">LOG OUT</button> </a>`)
                 
                 $("#signedIn").append("<a> Welcome &nbsp;" + data.username + "</a>")
-               
-
-                //$('#signedIn').append('<link rel="stylesheet" type="text/css" href="css/p1.css">');
- 
+                // $('#cart').append("<a> Your Orders </a>")
+                
             }
 
         }  
     
     })
 
-    function pay(){
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
 
-    function checkout(){
-        
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-        
-    }
+function pay(){
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
-    function finish(){
+function checkout(){
+    if(document.getElementById("1").value.length == 0 || document.getElementById("2").value.length == 0 || 
+        document.getElementById("3").value.length == 0 || document.getElementById("4").value.length == 0 ||
+        document.getElementById("5").value.length == 0 || document.getElementById("6").value.length == 0 )
+        {
+            alert("Please fill out the address fields!")
+        }
+    
+    else
+    {
         var x = document.getElementById("snackbar");
         x.className = "show";
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-        window.location.href="/"
+        // window.location.href="/finalPay"
+
     }
+        
+}
+
+function finish(){
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    window.location.href="/"
+}
 

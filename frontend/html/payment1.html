@@ -90,6 +90,7 @@
                          <li><a href="/" class="smoothScroll">About Us</a></li>
                          <li><a href="/" class="smoothScroll">Packages</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li id="cart"></li>
                          <li id="signedIn"></li>
                          <li id="test"></li>
                     </ul>
@@ -115,56 +116,56 @@
                               <h4 class="price" style="margin-left: 25px;">Price: <span>&#8377;</span>250</h4>
                               <br><br>
                     
-                              
-                              <h2 style="margin-left: 25px;">Select your Location</h2>
-                                <div class="container">
-                                    <div class="row">
-                                    <div class="col-8">
-                                  <div class="form-group bmd-form-group {color}">
-                                <select class="form-control mdb-select2">
-                                    <option selected>LOCATION</option>
-                                    <option value="1">Ameerpet</option>
-                                    <option value="2">Alwal</option>
-                                    <option value="3">Balanagar</option>
-                                    <option value="4">Dilsukhnagar</option>
-                                    <option value="5">Gachibowli</option>
-                                    <option value="6">Ghatkesar</option>
-                                    <option value="7">Hayathnagar</option>
-                                    <option value="8">Hitechcity</option>
-                                    <option value="9">Jubilee Hills</option>
-                                    <option value="10">Khairatabad</option>
-                                    <option value="11">Kapra</option>
-                                    <option value="12">Keesara</option>
-                                    <option value="13">Kompally</option>
-                                    <option value="14">Kukatpally</option>
-                                    <option value="15">LB Nagar</option>
-                                    <option value="16">Malkajigiri</option>
-                                    <option value="17">Mehdipatnam</option>
-                                    <option value="18">Nampally</option>
-                                    <option value="19">Old City</option>
-                                    <option value="20">Patancheru</option>
-                                    <option value="21">Qutubullapur</option>
-                                    <option value="22">Sanathnagar</option>
-                                    <option value="23">Secunderabad</option>
-                                    <option value="24">Shamshabad</option>
-                                    <option value="25">Uppal</option>        
-                                    </select>  
-                                  </div>
-                                </div>    
-                              </div>
-                            </div>
-                            <h2 style="margin-left: 25px;">Enter your address</h2>
-
-
+                          
                             <div class="container">
                                 
-                                <fieldset>
+                                <form method="post" action="/api/addresses">
+                                   <h2 style="margin-left: 25px;">Select your Location</h2>
+                                   <div class="container">
+                                        <div class="row">
+                                        <div class="col-8">
+                                      <div class="form-group bmd-form-group {color}">
+                                    <select class="form-control mdb-select2" name="location">
+                                        <option selected>LOCATION</option>
+                                        <option value="Ameerpet">Ameerpet</option>
+                                        <option value="Alwal">Alwal</option>
+                                        <option value="Balanagar">Balanagar</option>
+                                        <option value="Dilsukhnagar">Dilsukhnagar</option>
+                                        <option value="Gachibowli">Gachibowli</option>
+                                        <option value="Ghatkesar">Ghatkesar</option>
+                                        <option value="Hayathnagar">Hayathnagar</option>
+                                        <option value="Hitechcity">Hitechcity</option>
+                                        <option value="Jubilee Hills">Jubilee Hills</option>
+                                        <option value="Khairatabad">Khairatabad</option>
+                                        <option value="Kapra">Kapra</option>
+                                        <option value="Keesara">Keesara</option>
+                                        <option value="Kompally">Kompally</option>
+                                        <option value="Kukatpally">Kukatpally</option>
+                                        <option value="LB Nagar">LB Nagar</option>
+                                        <option value="Malkajigiri">Malkajigiri</option>
+                                        <option value="Mehdipatnam">Mehdipatnam</option>
+                                        <option value="Nampally">Nampally</option>
+                                        <option value="Old City">Old City</option>
+                                        <option value="Patancheru">Patancheru</option>
+                                        <option value="Qutubullapur">Qutubullapur</option>
+                                        <option value="Sanathnagar">Sanathnagar</option>
+                                        <option value="Secunderabad">Secunderabad</option>
+                                        <option value="Shamshabad">Shamshabad</option>
+                                        <option value="Uppal">Uppal</option>        
+                                        </select>  
+                                      </div>
+                                    </div>    
+                                  </div>
+                                </div>
+                                <br><br>
+
+                                <h2 style="margin-left: 25px;">Enter your address</h2>
                               
                                     <div class="row">
                                          <div class="small-12 columns">
                                               <label>
                                                    <span>Full Name</span> &nbsp;&nbsp;&nbsp;
-                                                   <input type="text">
+                                                   <input type="text" id="1" name="fullName" required >
                                               </label>
                                          </div>
                                     </div>
@@ -173,7 +174,7 @@
                                          <div class="small-12 columns">
                                               <label>
                                                    <span>Address </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                   <input type="text">
+                                                   <input type="text" id="2" name="address" required>
                                               </label>
                                          </div>
                                     </div>
@@ -182,21 +183,20 @@
                                          <div class="small-6 columns">
                                               <label>
                                                    <span>City</span> &emsp;&emsp;&emsp;&emsp;
-      
-                                                   <input type="text">
+                                                   <input type="text" id="3" name="city" required>
                                               </label>
                                          </div>
                                          <div class="small-2 columns">
                                               <label>
                                                    <span class="_state">State</span>&emsp;&emsp;&emsp;&nbsp;&nbsp;
-                                                   <input type="text">
+                                                   <input type="text" id="4" name="state" required>
                                                    
                                               </label>
                                          </div>
                                          <div class="small-4 columns">
                                               <label>
                                                    <span class="_zip">Pincode</span>&emsp;&emsp;
-                                                   <input type="text">
+                                                   <input type="text" id="5" name="pinCode" required>
                                               </label>
                                          </div>
                                     </div>
@@ -204,11 +204,25 @@
                                          <div class="small-12 columns">
                                               <label>
                                                    <span>Phone</span>&emsp;&emsp;&emsp;
-                                                   <input type="tel">
+                                                   <input type="tel" id="6" name="phone" required>
                                               </label>
                                          </div>
                                     </div>
-                               </fieldset>
+
+                                    <br><br>
+                                    <input type="hidden" name="packageName" value="1-Day Meal Package">
+                                    <input type="hidden" name="price" value="Rs 250">
+
+                                    <div class="row" style="margin-left: 1px;">
+                    
+                                        <a href="/finalPay"><button onclick="checkout()" class="button button1 addtocart" type="submit" style="width: 250px; margin-left: 400px;"  >CHECKOUT</button></a>
+                                        <div id="snackbar">Proceeding for Payment</div>
+                                          
+                                   </div>
+
+                                  
+                    
+                               </form>
             
                             </div>
 
@@ -228,10 +242,13 @@
 
                 
                </div>
-               <div class="row" style="margin-left: 1px;">
-                    <a href="/finalPay"><button  class="button button1 addtocart" type="submit" style="width: 250px; margin-left: 400px;" onclick="checkout()">CHECKOUT</button></a>
-                    <div id="snackbar">Proceed for Payment</div>
-               </div>
+               <!-- <div class="row" style="margin-left: 1px;">
+                    
+                    <button onclick="checkout()"  class="button button1 addtocart" type="submit" style="width: 250px; margin-left: 400px;"  >CHECKOUT</button>
+                    <div id="snackbar">Proceeding for Payment</div>
+                    
+               </div> -->
+
           </div>
      </section>
       
@@ -291,11 +308,14 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script>
+    <!-- <script>
         $('document').ready(function() {
         $('.mdb-select2').select2();
         });
-    </script>
+    </script> -->
+
+
+
 
    <script src="js/jquery.js"></script>
    <script src="js/bootstrap.min.js"></script>
@@ -306,6 +326,7 @@
    <script src="js/smoothscroll.js"></script>
    <script src="js/custom.js"></script>
    <script src="js/site.js"></script>
+   <script src="js/addresses.js"></script>
 
 </body>
 </html>

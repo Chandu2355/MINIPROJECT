@@ -3,13 +3,16 @@ const addressModel  = require('../models/addressModel');
 module.exports.addAddressForUser = function(req, res){
 	console.log("Save Address for User "+req.session.userid);
 	var addressJson = {
-		pinCode: req.body.pinCode, 
+		location: req.body.location,
+		fullName: req.body.fullName,
 		address: req.body.address,
-		locality: req.body.locality,
 		city: req.body.city,
 		state: req.body.state,
+		pinCode: req.body.pinCode, 
 		userId: req.session.userid,
-		isDefaultAddress: false,
+		phone: req.body.phone,
+		packageName: req.body.packageName,
+		price: req.body.price,
 		isDeleted: false
 	};
 	var addForDB = new addressModel(addressJson);
@@ -21,6 +24,8 @@ module.exports.addAddressForUser = function(req, res){
 		else{
 			retObj.success = true;
 			retObj.message = "Address Saved Successfully";
+			console.log(addressJson)
+			res.redirect("/finalPay")
 		}
 	})
 }
@@ -30,7 +35,8 @@ module.exports.getAllAddressOfAUser = function(req, res){
 	var retObj = {success: false, message: 'failure', addresses: []};
 
 	if(req.session.userid){
-		var query = {userId: req.session.userid, isDeleted: {$ne: false}};
+		var query = {userId: req.session.userid, isDeleted: false};
+		console.log(query)
 		addressModel.find(query, function(err, addressArray){
 			if(err){
 				console.log(err);
