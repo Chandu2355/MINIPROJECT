@@ -63,8 +63,12 @@ app.post('/api/login', function(req, res) {
 var isAuthenticated = (req, res, next) => {
     if (req.session && req.session.userid)
         next();
-    else
-        return res.redirect("/");
+    else{
+        
+        return res.redirect("/register");
+
+    }
+        
 }
 
 

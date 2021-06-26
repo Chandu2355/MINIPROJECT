@@ -25,6 +25,26 @@
 
      <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/p1.css"> 
+
+    <style>
+         table {
+          font-family: 'Montserrat', sans-serif;
+          width: 100%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          }
+
+          td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          }
+
+          tr:nth-child(even) {
+          background-color: #f3abab;
+          }
+
+         
+    </style>
      
 
 </head>
@@ -62,7 +82,7 @@
                          <li><a href="/" class="smoothScroll">About Us</a></li>
                          <li><a href="/" class="smoothScroll">Packages</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
-                         <li id="cart"></li>
+                         <li><a href="/orders" class="smoothScroll" >Your Orders</a></li> 
                          <li id="signedIn"></li>
                          <li id="test"></li>
                     </ul>
@@ -74,19 +94,27 @@
      </section>
      
 
-     <!-- PACKAGE1 -->
+     <!-- ORDERS -->
     
      <section id="about" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
+                   <br><br>
 
-                    <div class="col-md-6 col-sm-12 productcont">
-                         <div class="p1 product product1" id=" 1">
-                        </div>
-                    </div>
+                   <h2  style="margin-left: 25px;">Your Orders</h2>
+                   <br>
 
-                    <div class="col-md-6 col-sm-12">   
-                    </div>
+                    <table class="table">
+                         <thead>
+                             <tr>
+                                 <th scope="col">PACKAGE NAME</th>
+                                 <th scope="col">PRICE</th>
+                                 <th scope="col">DATE OF ORDER</th>
+                             </tr>
+                         </thead>
+                         <tbody id="tests-table"></tbody>
+                     </table>
+
                </div>
                
           </div>
@@ -153,7 +181,8 @@
    <script src="js/smoothscroll.js"></script>
    <script src="js/custom.js"></script>
    <script src="js/site.js"></script>
-   <script src="js/p1.js"></script>
+   <script src="js/orders.js"></script>
+
 
   
 </body>

@@ -27,7 +27,6 @@ $(function(){
 				method: "get",
 			})
 			.done(function( data ) {
-				console.log("ADDRESS DATA: "+JSON.stringify(data));
 				$("#addresses").html(data);
 			});
 		}

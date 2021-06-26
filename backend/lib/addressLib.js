@@ -24,7 +24,7 @@ module.exports.addAddressForUser = function(req, res){
 		else{
 			retObj.success = true;
 			retObj.message = "Address Saved Successfully";
-			console.log(addressJson)
+			// console.log(addressJson)
 			res.redirect("/finalPay")
 		}
 	})
@@ -32,7 +32,7 @@ module.exports.addAddressForUser = function(req, res){
 
 module.exports.getAllAddressOfAUser = function(req, res){
 
-	var retObj = {success: false, message: 'failure', addresses: []};
+	var retObj 
 
 	if(req.session.userid){
 		var query = {userId: req.session.userid, isDeleted: false};
@@ -42,9 +42,9 @@ module.exports.getAllAddressOfAUser = function(req, res){
 				console.log(err);
 			}
 			else{
-				retObj.success=true;
-				retObj.message="success";
-				retObj.addresses = addressArray;
+				// retObj.success=true;
+				// retObj.message="success";
+				retObj = addressArray;
 			}
 			res.json(retObj);
 		})

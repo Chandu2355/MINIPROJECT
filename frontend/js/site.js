@@ -95,32 +95,43 @@ $.ajax({
 function pay(){
     var x = document.getElementById("snackbar");
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
 }
 
 function checkout(){
+    var location = document.getElementById('loc');
+    var invalid = location.value == "Please Select";
+ 
+
+
     if(document.getElementById("1").value.length == 0 || document.getElementById("2").value.length == 0 || 
         document.getElementById("3").value.length == 0 || document.getElementById("4").value.length == 0 ||
-        document.getElementById("5").value.length == 0 || document.getElementById("6").value.length == 0 )
+        document.getElementById("5").value.length == 0 || document.getElementById("6").value.length == 0 || invalid)
         {
-            alert("Please fill out the address fields!")
+            alert("Please fill all the required fields!")
         }
     
     else
     {
         var x = document.getElementById("snackbar");
         x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
         window.location.href="/finalPay"
 
     }
         
 }
 
+function checkforblank() {
+    
+    
+    
+}
+
 function finish(){
     var x = document.getElementById("snackbar");
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    window.location.href="/"
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
+    window.location.href="/orders"
 }
 
