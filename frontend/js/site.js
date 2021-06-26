@@ -101,14 +101,13 @@ function pay(){
 function checkout(){
     var location = document.getElementById('loc');
     var invalid = location.value == "Please Select";
- 
-
-
+   
     if(document.getElementById("1").value.length == 0 || document.getElementById("2").value.length == 0 || 
         document.getElementById("3").value.length == 0 || document.getElementById("4").value.length == 0 ||
-        document.getElementById("5").value.length == 0 || document.getElementById("6").value.length == 0 || invalid)
+        document.getElementById("5").value.length == 0 || document.getElementById("6").value.length == 0 || invalid )
         {
             alert("Please fill all the required fields!")
+            
         }
     
     else
