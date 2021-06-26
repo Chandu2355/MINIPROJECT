@@ -13,7 +13,7 @@ function view()
                 
                     var row = `<tr scope="row" >
                         
-                    <td>You have no orders placed</td>
+                    <td>You have no orders placed yet.</td>
                     <td></td>
                     <td></td>
 
