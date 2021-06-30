@@ -19,6 +19,7 @@ app.use(express.static(__dirname+"/frontend"))
 
 var cookieParser = require("cookie-parser")
 var session = require("express-session")
+
 const MongoStore = require('connect-mongo')
 
 
@@ -46,16 +47,11 @@ app.post('/api/login', function(req, res) {
         if (err) { res.status(400).json({ msg: "Failed" }); } else if (data.length == 1) {
             req.session.userid = data[0]._id
             req.session.username = data[0].username
-            //TODO:  Move to single object in session
-            //req.session.user = {userid: data[0]._id, username: data[0].username}
             console.log(req.session)
             res.redirect("/home");
-
-        } else {
-
+        } 
+        else {
             res.redirect("/login");
-            
-
         }
     });
 })
@@ -65,9 +61,7 @@ var isAuthenticated = (req, res, next) => {
     if (req.session && req.session.userid)
         next();
     else{
-        
         return res.redirect("/register");
-
     }
         
 }
@@ -194,7 +188,6 @@ app.get("/orders", isAuthenticated, function(req, res){
     let i = __dirname + "/frontend/html/orders.html";
     res.sendFile(i);
 });
-
 
 
 app.listen(PORT, function(){

@@ -21,9 +21,9 @@ function view()
             
                      $('#tests-table').append(row)
             }
-
+            var rev = data.length
       
-            for(var i=0;i<data.length;i++) {
+            for(var i=rev-1; i>=0; i--) {
                 addRow(data[i]);
 
                 }

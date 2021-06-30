@@ -98,9 +98,22 @@ function pay(){
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
 }
 
+
+
 function checkout(){
     var location = document.getElementById('loc');
     var invalid = location.value == "Please Select";
+
+    function isPhoneNumber(mobile){
+        var phoneRe = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/
+        return phoneRe.test(mobile);
+    }
+    
+    var mobile = document.getElementById("6").value
+    if(isPhoneNumber(mobile)){
+        console.log("yes")
+    
+    }
    
     if(document.getElementById("1").value.length == 0 || document.getElementById("2").value.length == 0 || 
         document.getElementById("3").value.length == 0 || document.getElementById("4").value.length == 0 ||
@@ -109,7 +122,10 @@ function checkout(){
             alert("Please fill all the required fields!")
             
         }
-    
+    else if(! (isPhoneNumber(mobile))){
+        alert("Enter valid phone number")
+
+    }
     else
     {
         var x = document.getElementById("snackbar");
@@ -117,8 +133,8 @@ function checkout(){
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
         window.location.href="/finalPay"
 
-    }
-        
+    }  
+   
 }
 
 
