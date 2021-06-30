@@ -165,7 +165,11 @@
                                          <div class="small-12 columns">
                                               <label>
                                                    <span>Full Name</span> &nbsp;&nbsp;&nbsp;
-                                                   <input type="text" id="1" name="fullName" required >
+                                                   <input type="text" id="1" name="fullName" onkeyup="
+                                                   var start = this.selectionStart;
+                                                   var end = this.selectionEnd;
+                                                   this.value = this.value.toUpperCase();
+                                                   this.setSelectionRange(start, end);" required >
                                               </label>
                                          </div>
                                     </div>
@@ -174,7 +178,11 @@
                                          <div class="small-12 columns">
                                               <label>
                                                    <span>Address </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                   <input type="text" id="2" name="address" required>
+                                                   <input type="text" id="2" name="address" onkeyup="
+                                                   var start = this.selectionStart;
+                                                   var end = this.selectionEnd;
+                                                   this.value = this.value.toUpperCase();
+                                                   this.setSelectionRange(start, end);" required>
                                               </label>
                                          </div>
                                     </div>
@@ -183,13 +191,21 @@
                                          <div class="small-6 columns">
                                               <label>
                                                    <span>City</span> &emsp;&emsp;&emsp;&emsp;
-                                                   <input type="text" id="3" name="city" required>
+                                                   <input type="text" id="3" name="city" onkeyup="
+                                                   var start = this.selectionStart;
+                                                   var end = this.selectionEnd;
+                                                   this.value = this.value.toUpperCase();
+                                                   this.setSelectionRange(start, end);" required>
                                               </label>
                                          </div>
                                          <div class="small-2 columns">
                                               <label>
                                                    <span class="_state">State</span>&emsp;&emsp;&emsp;&nbsp;&nbsp;
-                                                   <input type="text" id="4" name="state" required>
+                                                   <input type="text" id="4" name="state" onkeyup="
+                                                   var start = this.selectionStart;
+                                                   var end = this.selectionEnd;
+                                                   this.value = this.value.toUpperCase();
+                                                   this.setSelectionRange(start, end);" required>
                                                    
                                               </label>
                                          </div>

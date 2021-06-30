@@ -38,7 +38,7 @@ function addRow(obj) {
 
     timestamp = obj._id.toString().substring(0,8)
     date = new Date( parseInt( timestamp, 16 ) * 1000 )
-    date1 = date.toString().substring(4, 16)
+    date1 = date.toLocaleString(undefined, {timeZone: 'Asia/Kolkata'})
 
     var row = `<tr scope="row" >
                    
