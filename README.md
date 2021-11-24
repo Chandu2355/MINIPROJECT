@@ -1,6 +1,6 @@
 # CoviFeed
 
-- To help the COVID-19 patients in home isolation get access to nutritious food, this is a Web Application that caters to their food requirements.
+- This is a Web Applicaation to help the COVID-19 patients in home isolation get access to nutritious food, that caters to their food requirements.
 
 - The website allows any user to place their food orders by selecting a 1-day package, a 7-day package or a 14-day package, that offers them with 3 nutritious meals per day.
 
